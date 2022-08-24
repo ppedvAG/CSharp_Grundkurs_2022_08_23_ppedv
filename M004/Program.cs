@@ -28,6 +28,7 @@ for (int i = 0; i < 10; i++) //Zähler integriert
 	Console.WriteLine("for: " + i);
 }
 
+//forr + Tab + Tab
 for (int i = 10 - 1; i >= 0; i--) //Abwärts zählende Schleife
 {
 	Console.WriteLine("forr: " + i);
@@ -43,6 +44,9 @@ foreach (int zahl in zahlen) //Kein daneben greifen bei Arrays möglich
 {
 	Console.WriteLine(zahl);
 }
+
+foreach (int zahl in zahlen) //Einzeilige Schleifen können auch ohne Klammern geschrieben werden
+	Console.WriteLine(zahl);
 #endregion
 
 #region Enums
@@ -116,6 +120,7 @@ switch (heute) //switch mit boolscher Logik
 	case Wochentag.Samstag or Wochentag.Sonntag:
 		Console.WriteLine("Wochenende");
 		break;
+	//default ist optional
 }
 #endregion
 
