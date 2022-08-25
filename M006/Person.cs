@@ -2,9 +2,15 @@
 
 namespace M006;
 
+/// <summary>
+/// Die Person Klasse
+/// </summary>
 class Person
 {
 	#region Variable
+	/// <summary>
+	/// Das Feld vom Nachnamen
+	/// </summary>
 	private string nachname;
 
 	public string GetName()
@@ -22,6 +28,9 @@ class Person
 	#region Properties
 	private string vorname;
 
+	/// <summary>
+	/// Das Vorname Property
+	/// </summary>
 	public string Vorname //Property statt Get/Set Methoden
 	{
 		get => vorname; //Expression Body mit => statt { } und return bei Einzeilern
@@ -59,13 +68,25 @@ class Person
 		this.nachname = nachname;
 	}
 
+	/// <summary>
+	/// Der Konstruktor mit Gehalt
+	/// </summary>
+	/// <param name="vorname">Der Vorname</param>
+	/// <param name="nachname">Der Nachname</param>
+	/// <param name="gehalt">Das Gehalt</param>
 	public Person(string vorname, string nachname, int gehalt) : this(vorname, nachname) //Konstruktoren verketten
 	{
 		this.gehalt = gehalt;
 	}
 
+	/// <summary>
+	/// Ein Standardkonstruktor, der Test auf die Konsole schreibt
+	/// </summary>
 	public Person() => Console.WriteLine("Test"); //Expression Body auch hier möglich (Einzeiler)
 	#endregion
 
+	/// <summary>
+	/// Eine Ausgabe der Person wird durch diese Methode auf die Konsole geschrieben
+	/// </summary>
 	public void PrintPerson() => Console.WriteLine($"{Vorname} {GetName()}"); //Expression Body auch hier möglich (Einzeiler)
 }
