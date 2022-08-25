@@ -51,6 +51,11 @@ internal class Program
 		bool? nullableBool = null;
 		double? nullableDouble = null;
 		char? nullableChar = null;
+
+		if (person != null) //Schauen ob an der Variable ein Objekt hängt (ob das Objekt existiert)
+		{
+
+		}
 		#endregion
 	}
 
